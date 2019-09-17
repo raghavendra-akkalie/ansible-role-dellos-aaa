@@ -1,9 +1,7 @@
 #jinja2: trim_blocks: True,lstrip_blocks: True
 {#############################################
-
 Purpose:
 Configure AAA commands for dellos6 Devices
-
 dellos_aaa:
   tacacs_server:
         key: 7
@@ -65,7 +63,6 @@ dellos_aaa:
             type: {{attribute_type.mac_ietf_lower_case}}
             state: present
 
-
   aaa_authentication:
      auth_list: 
        - name: default
@@ -97,7 +94,6 @@ dellos_aaa:
             key_string: aaa
             state: present
           state: present
-
 ##################################################}
 {% if dellos_aaa is defined and dellos_aaa %}
 {% for key in dellos_aaa.keys() %}

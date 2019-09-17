@@ -1,8 +1,6 @@
 ---
 # vars file for Dell-Networking.dellos-aaa, below gives a sample configuration
-
 # Sample variables for dellos6 device
-
 dellos_aaa:
   tacacs_server:
         key: 0
@@ -66,7 +64,6 @@ dellos_aaa:
             type: "{{attribute_type.mac_ietf_lower_case}}"
             state: present
 
-
   aaa_authentication:
         auth_list:
           - name: default
@@ -113,10 +110,7 @@ dellos_aaa:
               state: present
           state: present
 
-
-
 # Sample variables for dellos9 device
-
 dellos_aaa:
     radius_server:
         key: radius
@@ -261,4 +255,3 @@ dellos_aaa:
             type: group radius group tacacs+ local
             state: "absent"
         re_authenticate: true
-
